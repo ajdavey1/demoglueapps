@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="dark">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Client Portfolio</title>
+    <link rel="stylesheet" href="../assets/t42bootstrap.bundle.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+      <header class="navbar-primary container-fluid">
+        <div class="row">
+          <div class="col-6">
+            <h3 class="text-truncate mt-2 mb-1"  id="title-name">No client selected</h3>
+            <h6>Portfolio</h6>
+          </div>
+          <div class="col-6 align-self-center">
+            <div class="d-flex flex-row justify-content-end">
+                <button type="button" class="btn btn-icon disabled" action="send-email" disabled>
+                    <i class="icon-mail-1"></i>
+                  </button>
+                  <button type="button" class="btn btn-icon disabled" action="open-sheet" disabled>
+                    <i class="icon-file-excel"></i>
+                  </button>
+                  <button type="button" class="btn btn-icon active hidden" action="sync-off">
+                    <i class="icon-radio"></i>
+                  </button>
+                  <button type="button" class="btn btn-icon" action="sync-on">
+                    <i class="icon-spin1"></i>
+                  </button>
+            </div>
+          </div>
+        </div>
+        </header>
+
+    <div class="container-fluid">
+      <div class="table-responsive mt-3">
+        <table class="table table-striped contacts-table">
+          <colgroup>
+            <col width="">
+            <col width="">
+            <col width="">
+            <col width="">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>RIC</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th class="text-right">No. of shares</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="display:none;" class="empty-row">
+              <td class="instrument-ric"></td>
+              <td class="instrument-name"></td>
+              <td class="instrument-price text-right"></td>
+              <td class="instrument-number text-right"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="../assets/tick42-glue-4.4.1.min.js"></script>
+    <script src="../assets/glue4office-1.4.5.min.js"></script>
+    <script src="./script.js" type="module"></script>
+  </body>
+
+</html>

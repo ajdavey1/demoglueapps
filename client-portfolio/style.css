@@ -1,0 +1,13 @@
+.table-responsive {
+  height: calc(100vh - 86px);
+}
+.table td:not(:first-child),
+.table td:not(:first-child) {
+  max-width: 90px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.hidden {
+  display: none!important;
+}

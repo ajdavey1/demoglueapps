@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Client List234</title>
+  <link rel="stylesheet" href="../assets/t42bootstrap.bundle.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="navbar-primary container-fluid">
+    <div class="row">
+      <div class="col-6 py-2 pl-3">
+        <h3 class="text-truncate mt-2">Client List</h3>
+      </div>
+      <div class="col-6">
+        <div class="d-flex flex-row justify-content-end">
+
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container-fluid">
+    <div class="pt-3 list-search">
+      <div class="form-group">
+        <input type="text" placeholder="Type to filter" class="form-control contacts-filter">
+      </div>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-striped contacts-table table-hover">
+        <colgroup>
+          <col width="25px">
+          <col width="">
+          <col width="">
+          <col width="">
+        </colgroup>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Email</th>
+            <th class="text-right">Portfolio Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="display:none;" class="empty-row">
+            <td class="action-menu action-button">
+              <!-- action button -->
+              <div class="dropdown">
+                <button class="btn btn-icon" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <i class="icon-ellipsis-vert"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#" action="openPortfolio">Open Portfolio</a>
+                  <a class="dropdown-item disabled" href="#" action="openPortfolioInExcel">Open Portfolio in Excel</a>
+                  <a class="dropdown-item" href="#" action="openContact">Open Contact</a>
+                  <a class="dropdown-item disabled" href="#" action="emailContact">E-mail Client</a>
+                  <a class="dropdown-item disabled" href="#" action="updateContact">Update Contact</a>
+                </div>
+              </div>
+            </td>
+            <td class="client-name"></td>
+            <td class="client-email"></td>
+            <td class="client-portfolio text-right"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+
+  <script src="../assets/tick42-glue-4.4.1.min.js"></script>
+  <script src="../assets/glue4office-1.4.5.min.js"></script>
+  <script type="module" src="./script.js"></script>
+</body>
+
+</html>
